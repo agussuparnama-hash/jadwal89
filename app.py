@@ -2,45 +2,49 @@ import streamlit as st
 import pandas as pd
 import io
 
-# 1. DEFINISIKAN FUNGSI TERLEBIH DAHULU
-@st.cache_data
-def load_data():
-    try:
-        df = pd.read_csv("Master_Jadwal_Sekolah.csv")
-        # Membersihkan data dari nilai kosong
-        df['Kode_Guru'] = df['Kode_Guru'].fillna('0').astype(str)
-        return df
-    except FileNotFoundError:
-        st.error("File 'Master_Jadwal_Sekolah.csv' tidak ditemukan! Pastikan file sudah di-upload ke GitHub.")
-        return pd.DataFrame() # Return empty df jika error
+# ... (fungsi load_data Anda sebelumnya) ...
 
-# 2. PANGGIL FUNGSI SETELAH DEFINISI
-df = load_data()
-
-# 3. PASTIKAN df TIDAK KOSONG
-if df.empty:
-    st.stop() # Berhenti jika tidak ada data
-
-st.title("📅 Jadwal Mengajar Guru")
-
-# Sidebar
-list_kode = sorted(df[df['Kode_Guru'] != '0']['Kode_Guru'].unique().tolist())
-pilih_kode = st.sidebar.selectbox("Pilih Kode Guru:", ["-- Pilih Kode --"] + list_kode)
-
-# Inisialisasi variabel untuk menghindari NameError
-filtered_df = pd.DataFrame()
-
-if pilih_kode != "-- Pilih Kode --":
-    filtered_df = df[df['Kode_Guru'] == pilih_kode].copy()
+# Fungsi untuk membuat Excel Berwarna
+def to_excel_colored(df):
+    output = io.BytesIO()
+    # Gunakan engine xlsxwriter untuk memberi warna
+    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    df.to_excel(writer, index=False, sheet_name='Jadwal')
     
-    # Pengurutan
-    hari_order = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
-    filtered_df['Hari'] = pd.Categorical(filtered_df['Hari'], categories=hari_order, ordered=True)
-    filtered_df = filtered_df.sort_values(['Hari', 'Jam Ke'])
+    workbook = writer.book
+    worksheet = writer.sheets['Jadwal']
+    
+    # Definisi warna per hari (Hex Color)
+    colors = {
+        'Senin': '#FFC0CB', 'Selasa': '#ADD8E6', 'Rabu': '#90EE90',
+        'Kamis': '#FFFFE0', 'Jumat': '#D8BFD8', 'Sabtu': '#FFD700'
+    }
+    
+    # Terapkan format warna ke baris
+    for idx, row in df.iterrows():
+        hari = row['Hari']
+        color = colors.get(hari, '#FFFFFF')
+        cell_format = workbook.add_format({'bg_color': color, 'border': 1})
+        
+        # Tulis ulang setiap sel dengan format warna
+        for col_num, value in enumerate(row):
+            worksheet.write(idx + 1, col_num, value, cell_format)
+            
+    writer.close()
+    return output.getvalue()
 
-# 4. TAMPILKAN HASIL
+# ... (setelah filter filtered_df berhasil) ...
+
 if not filtered_df.empty:
     st.subheader(f"Jadwal Guru: {pilih_kode}")
     st.dataframe(filtered_df, use_container_width=True)
-else:
-    st.info("Silakan pilih kode guru Anda di menu samping.")
+    
+    # Proses Download Excel
+    excel_data = to_excel_colored(filtered_df)
+    
+    st.download_button(
+        label="📥 Download Jadwal (Excel Berwarna)",
+        data=excel_data,
+        file_name=f"Jadwal_Guru_{pilih_kode}.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
