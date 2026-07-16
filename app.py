@@ -1,33 +1,42 @@
 import streamlit as st
 import pandas as pd
 
-# Load data
+# Judul Aplikasi
+st.title("Sistem Informasi Jadwal Mengajar")
+
+# Memuat data
 @st.cache_data
 def load_data():
-    return pd.read_csv('Master_Jadwal_Sekolah.csv')
+    # Pastikan file Master_Jadwal_Sekolah.csv berada di folder yang sama
+    df = pd.read_csv("Master_Jadwal_Sekolah.csv")
+    return df
 
 df = load_data()
 
-st.title("Sistem Informasi Jadwal Guru")
-st.write("Masukkan Kode Guru Anda untuk melihat jadwal mengajar.")
+# Input Pencarian
+st.sidebar.header("Pencarian Jadwal")
+mapel_input = st.sidebar.text_input("Masukkan Mata Pelajaran:")
+kode_guru_input = st.sidebar.text_input("Masukkan Kode Guru:")
 
-# Menampilkan daftar kode yang tersedia untuk pengecekan
-st.write("Kode guru yang tersedia dalam sistem:")
-st.write(df['Kode_Guru'].unique())
-
-# Input Kode Guru
-kode_guru = st.text_input("Masukkan Kode Guru (Contoh: 14):")
-
-if kode_guru:
-    # Perbaikan: Membersihkan data dan melakukan pencarian dengan aman
-    df['Kode_Guru_Str'] = df['Kode_Guru'].astype(str).str.strip().replace('\.0$', '', regex=True)
-    input_kode = str(kode_guru).strip()
-    
+if mapel_input or kode_guru_input:
     # Filter data
-    hasil = df[df['Kode_Guru_Str'] == input_kode]
+    filtered_df = df.copy()
     
-    if not hasil.empty:
-        st.success(f"Jadwal untuk Guru dengan Kode: {kode_guru}")
-        st.table(hasil[['Hari', 'Jam Ke', 'Waktu', 'Tingkat', 'Kelas', 'Mapel']])
+    if mapel_input:
+        filtered_df = filtered_df[filtered_df['Mapel'].str.contains(mapel_input, case=False, na=False)]
+    
+    if kode_guru_input:
+        filtered_df = filtered_df[filtered_df['Kode_Guru'].astype(str) == kode_guru_input]
+
+    # Mengurutkan berdasarkan Hari dan Jam Ke
+    hari_order = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
+    filtered_df['Hari'] = pd.Categorical(filtered_df['Hari'], categories=hari_order, ordered=True)
+    filtered_df = filtered_df.sort_values(['Hari', 'Jam Ke'])
+
+    if not filtered_df.empty:
+        st.write(f"Jadwal untuk {mapel_input} (Kode: {kode_guru_input}):")
+        st.dataframe(filtered_df, use_container_width=True)
     else:
-        st.error("Kode tidak ditemukan. Pastikan kode sesuai dengan daftar di atas.")
+        st.warning("Jadwal tidak ditemukan. Periksa kembali input Anda.")
+else:
+    st.info("Silakan masukkan Mata Pelajaran atau Kode Guru di sidebar untuk melihat jadwal.")
