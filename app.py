@@ -1,45 +1,47 @@
 import streamlit as st
 import pandas as pd
+import io
 
-# Konfigurasi Halaman
-st.set_page_config(page_title="Jadwal Mengajar Guru", layout="wide")
-st.title("📅 Jadwal Mengajar Guru")
+# ... (Kod load_data anda sebelumnya) ...
 
-# Memuat data
-@st.cache_data
-def load_data():
-    # Pastikan file Master_Jadwal_Sekolah.csv ada di folder yang sama
-    df = pd.read_csv("Master_Jadwal_Sekolah.csv")
-    # Membersihkan data: hapus spasi, isi yang kosong, dan ubah kode guru ke string
-    df['Kode_Guru'] = df['Kode_Guru'].fillna(0).astype(int).astype(str)
-    return df
-
-df = load_data()
-
-# Sidebar untuk Pemilihan Kode Guru
-st.sidebar.header("Pilih Kode Guru Anda")
-
-# Mengambil daftar kode guru yang unik dan mengurutkannya
-list_kode = sorted(df[df['Kode_Guru'] != '0']['Kode_Guru'].unique().tolist())
-
-pilih_kode = st.sidebar.selectbox("Pilih Kode Guru:", ["-- Pilih Kode --"] + list_kode)
-
-# Logika Filter
-if pilih_kode != "-- Pilih Kode --":
-    # Filter data berdasarkan kode guru
-    filtered_df = df[df['Kode_Guru'] == pilih_kode].copy()
+# Fungsi untuk menukar DF kepada Excel dengan warna
+def to_excel_colored(df):
+    output = io.BytesIO()
+    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    df.to_excel(writer, index=False, sheet_name='Jadual')
     
-    # Mengurutkan berdasarkan Hari dan Jam Ke
-    hari_order = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
-    filtered_df['Hari'] = pd.Categorical(filtered_df['Hari'], categories=hari_order, ordered=True)
-    filtered_df = filtered_df.sort_values(['Hari', 'Jam Ke'])
+    workbook = writer.book
+    worksheet = writer.sheets['Jadual']
     
-    # Menampilkan hasil
-    st.subheader(f"Jadwal Mengajar untuk Guru Kode: {pilih_kode}")
+    # Definisi warna untuk setiap hari
+    colors = {
+        'Senin': '#FFC0CB', 'Selasa': '#ADD8E6', 'Rabu': '#90EE90',
+        'Kamis': '#FFFFE0', 'Jumat': '#D8BFD8', 'Sabtu': '#FFD700'
+    }
     
-    # Menampilkan tabel yang sudah rapi
-    st.dataframe(filtered_df[['Hari', 'Jam Ke', 'Waktu', 'Tingkat', 'Kelas', 'Mapel']], 
-                 use_container_width=True, 
-                 hide_index=True)
-else:
+    # Format sel
+    for idx, row in df.iterrows():
+        hari = row['Hari']
+        color = colors.get(hari, '#FFFFFF')
+        cell_format = workbook.add_format({'bg_color': color, 'border': 1})
+        
+        for col_num in range(len(df.columns)):
+            worksheet.write(idx + 1, col_num, row[col_num], cell_format)
+            
+    writer.close()
+    return output.getvalue()
+
+# Di dalam bahagian paparan hasil:
+if not filtered_df.empty:
+    st.subheader(f"Jadual untuk Guru: {pilih_kode}")
+    st.dataframe(filtered_df, use_container_width=True)
+    
+    # Butang Download Excel
+    excel_data = to_excel_colored(filtered_df)
+    st.download_button(
+        label="📥 Download Jadual (Excel Berwarna)",
+        data=excel_data,
+        file_name=f"Jadual_Guru_{pilih_kode}.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
     st.info("Silakan pilih kode guru Anda pada menu di sebelah kiri untuk melihat jadwal.")
