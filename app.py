@@ -2,60 +2,57 @@ import streamlit as st
 import pandas as pd
 import io
 
-# 1. Pastikan fungsi load_data didefinisikan dengan benar
-@st.cache_data
+# 1. Hapus dekorator duplikat dan pastikan fungsi benar
 @st.cache_data
 def load_data():
     try:
         df = pd.read_csv("Master_Jadwal_Sekolah.csv")
-        
-        # --- PERBAIKAN: CEK NAMA KOLOM ---
-        # Menghapus spasi di awal/akhir nama kolom (mengatasi typo spasi)
+        # Membersihkan spasi pada nama kolom
         df.columns = df.columns.str.strip()
         
-        # Cek apakah kolom yang dibutuhkan benar-benar ada
+        # Cek apakah kolom yang dibutuhkan ada
         required_cols = ['Hari', 'Jam Ke', 'Mapel', 'Kode_Guru']
         for col in required_cols:
             if col not in df.columns:
-                st.error(f"Kolom '{col}' tidak ditemukan di file CSV! Nama kolom yang ada: {list(df.columns)}")
-                return pd.DataFrame()
+                return None, f"Kolom '{col}' tidak ditemukan. Kolom yang ada: {list(df.columns)}"
 
         # Membersihkan data
-        df['Kode_Guru'] = df['Kode_Guru'].fillna('0').astype(str)
+        df['Kode_Guru'] = df['Kode_Guru'].fillna('0').astype(str).str.replace('.0', '', regex=False)
         df = df.drop_duplicates()
-        return df
-        
+        return df, None
     except Exception as e:
-        st.error(f"Gagal memuat file: {e}")
-        return pd.DataFrame()
-# 2. Muat data
-df = load_data()
+        return None, str(e)
 
-# 3. Inisialisasi awal filtered_df agar tidak terjadi NameError
+# 2. Muat data dengan penanganan error yang lebih aman
+df, error_msg = load_data()
+
+if error_msg:
+    st.error(f"Gagal memuat file: {error_msg}")
+    st.stop() # Ini penting untuk menghentikan program jika gagal
+
+# 3. Inisialisasi awal filtered_df
 filtered_df = pd.DataFrame() 
 
-if not df.empty:
-    st.title("📅 Jadwal Mengajar Guru")
+st.title("📅 Jadwal Mengajar Guru")
     
-    # Ambil list kode guru yang unik, hapus yang bernilai '0' atau kosong
-    list_kode = sorted(df[df['Kode_Guru'] != '0']['Kode_Guru'].unique().tolist())
-    pilih_kode = st.sidebar.selectbox("Pilih Kode Guru:", ["-- Pilih Kode --"] + list_kode)
+# Ambil list kode guru yang unik, hapus yang bernilai '0' atau 'nan'
+list_kode = sorted(df[~df['Kode_Guru'].isin(['0', 'nan']) ]['Kode_Guru'].unique().tolist())
+pilih_kode = st.sidebar.selectbox("Pilih Kode Guru:", ["-- Pilih Kode --"] + list_kode)
 
-    if pilih_kode != "-- Pilih Kode --":
-        # Filter berdasarkan kode yang dipilih
-        filtered_df = df[df['Kode_Guru'] == pilih_kode].copy()
-        
-        # Urutkan berdasarkan hari
-        hari_order = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
-        filtered_df['Hari'] = pd.Categorical(filtered_df['Hari'], categories=hari_order, ordered=True)
-        filtered_df = filtered_df.sort_values(['Hari', 'Jam Ke'])
+if pilih_kode != "-- Pilih Kode --":
+    # Filter berdasarkan kode yang dipilih
+    filtered_df = df[df['Kode_Guru'] == pilih_kode].copy()
+    
+    # Urutkan berdasarkan hari
+    hari_order = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
+    filtered_df['Hari'] = pd.Categorical(filtered_df['Hari'], categories=hari_order, ordered=True)
+    filtered_df = filtered_df.sort_values(['Hari', 'Jam Ke'])
 
-# 4. Pengecekan aman setelah proses filter
+# 4. Tampilkan Hasil
 if not filtered_df.empty:
     st.subheader(f"Jadwal Guru: {pilih_kode}")
     st.dataframe(filtered_df, use_container_width=True)
     
-    # Fungsi Download Excel Berwarna
     def to_excel_colored(df):
         output = io.BytesIO()
         writer = pd.ExcelWriter(output, engine='xlsxwriter')
@@ -80,7 +77,7 @@ if not filtered_df.empty:
         file_name=f"Jadwal_Guru_{pilih_kode}.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
-elif "pilih_kode" in locals() and pilih_kode != "-- Pilih Kode --":
+elif pilih_kode != "-- Pilih Kode --":
     st.warning("Data untuk kode guru tersebut tidak ditemukan.")
 else:
     st.info("Silakan pilih kode guru di menu samping untuk melihat jadwal.")
