@@ -1,0 +1,387 @@
+Hari,Jam Ke,Waktu,Tingkat,Kelas,Mapel,Kode_Guru
+Senin,1,07:30-08:10,IX,IX-A,MBG - LITERASI BIMA,N/A
+Senin,2,08:10-08:50,IX,IX-A,Bahasa Inggris,14
+Senin,3,08:50-09:30,IX,IX-A,Bahasa Inggris,14
+Senin,4,09:40-10:20,IX,IX-A,IPA,02
+Senin,5,10:20-11:00,IX,IX-A,IPA,02
+Senin,6,11:00-11:40,IX,IX-A,Informatika,30
+Senin,7,11:50-12:30,IX,IX-A,Matematika,08
+Senin,8,12:30-13:10,IX,IX-A,Matematika,08
+Selasa,1,07:30-08:10,IX,IX-A,KERJA BAKTI,N/A
+Selasa,2,08:10-08:50,IX,IX-A,B.Indonesia,21
+Selasa,3,08:50-09:30,IX,IX-A,B.Indonesia,21
+Selasa,4,09:40-10:20,IX,IX-A,Bahasa Bali,28
+Selasa,5,10:20-11:00,IX,IX-A,Bahasa Bali,28
+Selasa,6,11:00-11:40,IX,IX-A,Agm/B.Pekerti,26
+Selasa,7,11:50-12:30,IX,IX-A,Agm/B.Pekerti,26
+Selasa,8,12:30-13:10,IX,IX-A,Bahasa Inggris,14
+Rabu,1,07:30-08:10,IX,IX-A,KERJA BAKTI,N/A
+Rabu,2,08:10-08:50,IX,IX-A,B.Indonesia,25
+Rabu,3,08:50-09:30,IX,IX-A,B.Indonesia,25
+Rabu,4,09:40-10:20,IX,IX-A,B.Indonesia,25
+Rabu,5,10:20-11:00,IX,IX-A,Matematika,08
+Rabu,6,11:00-11:40,IX,IX-A,Matematika,08
+Rabu,7,11:50-12:30,IX,IX-A,IPS,18
+Rabu,8,12:30-13:10,IX,IX-A,Seni Musik,19
+Kamis,1,07:30-08:10,IX,IX-A,KERJA BAKTI,N/A
+Kamis,2,08:10-08:50,IX,IX-A,PJOK,12
+Kamis,3,08:50-09:30,IX,IX-A,PJOK,12
+Kamis,4,09:40-10:20,IX,IX-A,Seni Musik,19
+Kamis,5,10:20-11:00,IX,IX-A,P.Pancasila,10
+Kamis,6,11:00-11:40,IX,IX-A,P.Pancasila,10
+Kamis,7,11:50-12:30,IX,IX-A,IPS,18
+Kamis,8,12:30-13:10,IX,IX-A,IPS,18
+Jumat,1,07:30-08:10,IX,IX-A,KERJA BAKTI,N/A
+Jumat,2,08:10-08:50,IX,IX-A,IPA,02
+Jumat,3,08:50-09:30,IX,IX-A,IPA,02
+Jumat,4,09:40-10:20,IX,IX-A,Informatika,30
+Jumat,5,10:20-11:00,IX,IX-A,Kokurikuler,N/A
+Jumat,6,11:00-11:40,IX,IX-A,Kokurikuler,N/A
+Jumat,7,11:50-12:30,IX,IX-A,Kokurikuler,N/A
+Jumat,8,12:30-13:10,IX,IX-A,Kokurikuler,N/A
+Senin,2,08:10-08:50,IX,IX-B,Bahasa Inggris,15
+Senin,3,08:50-09:30,IX,IX-B,Bahasa Inggris,15
+Senin,4,09:40-10:20,IX,IX-B,P.Pancasila,10
+Senin,5,10:20-11:00,IX,IX-B,P.Pancasila,10
+Senin,6,11:00-11:40,IX,IX-B,IPA,02
+Senin,7,11:50-12:30,IX,IX-B,IPA,02
+Senin,8,12:30-13:10,IX,IX-B,Bahasa Bali,28
+Selasa,2,08:10-08:50,IX,IX-B,Seni Musik,19
+Selasa,3,08:50-09:30,IX,IX-B,Seni Musik,19
+Selasa,4,09:40-10:20,IX,IX-B,IPS,18
+Selasa,5,10:20-11:00,IX,IX-B,Matematika,08
+Selasa,6,11:00-11:40,IX,IX-B,Matematika,08
+Selasa,7,11:50-12:30,IX,IX-B,Informatika,30
+Selasa,8,12:30-13:10,IX,IX-B,Informatika,30
+Rabu,2,08:10-08:50,IX,IX-B,Bahasa Inggris,15
+Rabu,3,08:50-09:30,IX,IX-B,Bahasa Bali,28
+Rabu,4,09:40-10:20,IX,IX-B,Agm/B.Pekerti,26
+Rabu,5,10:20-11:00,IX,IX-B,Agm/B.Pekerti,26
+Rabu,6,11:00-11:40,IX,IX-B,IPS,18
+Rabu,7,11:50-12:30,IX,IX-B,B.Indonesia,25
+Rabu,8,12:30-13:10,IX,IX-B,B.Indonesia,25
+Kamis,2,08:10-08:50,IX,IX-B,PJOK,12
+Kamis,3,08:50-09:30,IX,IX-B,PJOK,12
+Kamis,4,09:40-10:20,IX,IX-B,IPA,02
+Kamis,5,10:20-11:00,IX,IX-B,IPA,02
+Kamis,6,11:00-11:40,IX,IX-B,B.Indonesia,25
+Kamis,7,11:50-12:30,IX,IX-B,B.Indonesia,25
+Kamis,8,12:30-13:10,IX,IX-B,B.Indonesia,25
+Jumat,2,08:10-08:50,IX,IX-B,IPS,18
+Jumat,3,08:50-09:30,IX,IX-B,Matematika,08
+Jumat,4,09:40-10:20,IX,IX-B,Bahasa Inggris,15
+Jumat,5,10:20-11:00,IX,IX-B,Kokurikuler,N/A
+Jumat,6,11:00-11:40,IX,IX-B,Kokurikuler,N/A
+Jumat,7,11:50-12:30,IX,IX-B,Kokurikuler,N/A
+Jumat,8,12:30-13:10,IX,IX-B,Kokurikuler,N/A
+Senin,2,08:10-08:50,IX,IX-C,Informatika,30
+Senin,3,08:50-09:30,IX,IX-C,Informatika,30
+Senin,4,09:40-10:20,IX,IX-C,Agm/B.Pekerti,26
+Senin,5,10:20-11:00,IX,IX-C,Agm/B.Pekerti,26
+Senin,6,11:00-11:40,IX,IX-C,Seni Musik,19
+Senin,7,11:50-12:30,IX,IX-C,Bahasa Bali,27
+Senin,8,12:30-13:10,IX,IX-C,Bahasa Inggris,15
+Selasa,2,08:10-08:50,IX,IX-C,IPA,02
+Selasa,3,08:50-09:30,IX,IX-C,IPA,02
+Selasa,4,09:40-10:20,IX,IX-C,Bahasa Bali,27
+Selasa,5,10:20-11:00,IX,IX-C,B.Indonesia,21
+Selasa,6,11:00-11:40,IX,IX-C,B.Indonesia,21
+Selasa,7,11:50-12:30,IX,IX-C,IPS,18
+Selasa,8,12:30-13:10,IX,IX-C,IPS,18
+Rabu,2,08:10-08:50,IX,IX-C,Matematika,08
+Rabu,3,08:50-09:30,IX,IX-C,Matematika,08
+Rabu,4,09:40-10:20,IX,IX-C,B.Indonesia,21
+Rabu,5,10:20-11:00,IX,IX-C,B.Indonesia,21
+Rabu,6,11:00-11:40,IX,IX-C,IPA,02
+Rabu,7,11:50-12:30,IX,IX-C,IPA,02
+Rabu,8,12:30-13:10,IX,IX-C,IPS,18
+Kamis,2,08:10-08:50,IX,IX-C,PJOK,12
+Kamis,3,08:50-09:30,IX,IX-C,PJOK,12
+Kamis,4,09:40-10:20,IX,IX-C,P.Pancasila,10
+Kamis,5,10:20-11:00,IX,IX-C,Seni Musik,19
+Kamis,6,11:00-11:40,IX,IX-C,B.Indonesia,21
+Kamis,7,11:50-12:30,IX,IX-C,Matematika,08
+Kamis,8,12:30-13:10,IX,IX-C,Matematika,08
+Jumat,2,08:10-08:50,IX,IX-C,Bahasa Inggris,15
+Jumat,3,08:50-09:30,IX,IX-C,Bahasa Inggris,15
+Jumat,4,09:40-10:20,IX,IX-C,IPS,18
+Jumat,5,10:20-11:00,IX,IX-C,Kokurikuler,N/A
+Jumat,6,11:00-11:40,IX,IX-C,Kokurikuler,N/A
+Jumat,7,11:50-12:30,IX,IX-C,Kokurikuler,N/A
+Jumat,8,12:30-13:10,IX,IX-C,Kokurikuler,N/A
+Senin,2,08:10-08:50,IX,IX-D,P.Pancasila,10
+Senin,3,08:50-09:30,IX,IX-D,P.Pancasila,10
+Senin,4,09:40-10:20,IX,IX-D,B.Indonesia,21
+Senin,5,10:20-11:00,IX,IX-D,B.Indonesia,21
+Senin,6,11:00-11:40,IX,IX-D,B.Indonesia,21
+Senin,7,11:50-12:30,IX,IX-D,IPS,18
+Senin,8,12:30-13:10,IX,IX-D,IPS,18
+Selasa,2,08:10-08:50,IX,IX-D,Matematika,08
+Selasa,3,08:50-09:30,IX,IX-D,Matematika,08
+Selasa,4,09:40-10:20,IX,IX-D,IPA,02
+Selasa,5,10:20-11:00,IX,IX-D,IPA,02
+Selasa,6,11:00-11:40,IX,IX-D,Informatika,30
+Selasa,7,11:50-12:30,IX,IX-D,Bahasa Bali,27
+Selasa,8,12:30-13:10,IX,IX-D,Bahasa Bali,27
+Rabu,2,08:10-08:50,IX,IX-D,Agm/B.Pekerti,26
+Rabu,3,08:50-09:30,IX,IX-D,Agm/B.Pekerti,26
+Rabu,4,09:40-10:20,IX,IX-D,Seni Musik,19
+Rabu,5,10:20-11:00,IX,IX-D,Seni Musik,19
+Rabu,6,11:00-11:40,IX,IX-D,Informatika,30
+Rabu,7,11:50-12:30,IX,IX-D,Matematika,08
+Rabu,8,12:30-13:10,IX,IX-D,Matematika,08
+Kamis,2,08:10-08:50,IX,IX-D,IPA,02
+Kamis,3,08:50-09:30,IX,IX-D,IPA,02
+Kamis,4,09:40-10:20,IX,IX-D,B.Indonesia,21
+Kamis,5,10:20-11:00,IX,IX-D,B.Indonesia,21
+Kamis,6,11:00-11:40,IX,IX-D,IPS,18
+Kamis,7,11:50-12:30,IX,IX-D,Bahasa Inggris,15
+Kamis,8,12:30-13:10,IX,IX-D,Bahasa Inggris,15
+Jumat,2,08:10-08:50,IX,IX-D,PJOK,12
+Jumat,3,08:50-09:30,IX,IX-D,PJOK,12
+Jumat,4,09:40-10:20,IX,IX-D,P.Pancasila,10
+Jumat,5,10:20-11:00,IX,IX-D,Kokurikuler,N/A
+Jumat,6,11:00-11:40,IX,IX-D,Kokurikuler,N/A
+Jumat,7,11:50-12:30,IX,IX-D,Kokurikuler,N/A
+Jumat,8,12:30-13:10,IX,IX-D,Kokurikuler,N/A
+Senin,2,08:10-08:50,IX,IX-E,B.Indonesia,21
+Senin,3,08:50-09:30,IX,IX-E,B.Indonesia,21
+Senin,4,09:40-10:20,IX,IX-E,Seni Musik,19
+Senin,5,10:20-11:00,IX,IX-E,Seni Musik,19
+Senin,6,11:00-11:40,IX,IX-E,P.Pancasila,10
+Senin,7,11:50-12:30,IX,IX-E,Agm/B.Pekerti,26
+Senin,8,12:30-13:10,IX,IX-E,Agm/B.Pekerti,26
+Selasa,2,08:10-08:50,IX,IX-E,IPS,18
+Selasa,3,08:50-09:30,IX,IX-E,IPS,18
+Selasa,4,09:40-10:20,IX,IX-E,B.Indonesia,21
+Selasa,5,10:20-11:00,IX,IX-E,B.Indonesia,21
+Selasa,6,11:00-11:40,IX,IX-E,Bahasa Inggris,15
+Selasa,7,11:50-12:30,IX,IX-E,Matematika,08
+Selasa,8,12:30-13:10,IX,IX-E,Matematika,08
+Rabu,2,08:10-08:50,IX,IX-E,B.Indonesia,21
+Rabu,3,08:50-09:30,IX,IX-E,B.Indonesia,21
+Rabu,4,09:40-10:20,IX,IX-E,IPA,02
+Rabu,5,10:20-11:00,IX,IX-E,IPA,02
+Rabu,6,11:00-11:40,IX,IX-E,P.Pancasila,10
+Rabu,7,11:50-12:30,IX,IX-E,Informatika,30
+Rabu,8,12:30-13:10,IX,IX-E,Informatika,30
+Kamis,2,08:10-08:50,IX,IX-E,Matematika,08
+Kamis,3,08:50-09:30,IX,IX-E,Matematika,08
+Kamis,4,09:40-10:20,IX,IX-E,Bahasa Inggris,15
+Kamis,5,10:20-11:00,IX,IX-E,Bahasa Inggris,15
+Kamis,6,11:00-11:40,IX,IX-E,Bahasa Bali,27
+Kamis,7,11:50-12:30,IX,IX-E,IPA,02
+Kamis,8,12:30-13:10,IX,IX-E,IPA,02
+Jumat,2,08:10-08:50,IX,IX-E,PJOK,12
+Jumat,3,08:50-09:30,IX,IX-E,PJOK,12
+Jumat,4,09:40-10:20,IX,IX-E,Matematika,08
+Jumat,5,10:20-11:00,IX,IX-E,Kokurikuler,N/A
+Jumat,6,11:00-11:40,IX,IX-E,Kokurikuler,N/A
+Jumat,7,11:50-12:30,IX,IX-E,Kokurikuler,N/A
+Jumat,8,12:30-13:10,IX,IX-E,Kokurikuler,N/A
+Senin,2,08:10-08:50,IX,IX-F,IPS,18
+Senin,3,08:50-09:30,IX,IX-F,IPS,18
+Senin,4,09:40-10:20,IX,IX-F,IPS,18
+Senin,5,10:20-11:00,IX,IX-F,Matematika,08
+Senin,6,11:00-11:40,IX,IX-F,Matematika,08
+Senin,7,11:50-12:30,IX,IX-F,B.Indonesia,21
+Senin,8,12:30-13:10,IX,IX-F,B.Indonesia,21
+Selasa,2,08:10-08:50,IX,IX-F,P.Pancasila,10
+Selasa,3,08:50-09:30,IX,IX-F,Bahasa Inggris,15
+Selasa,4,09:40-10:20,IX,IX-F,Agm/B.Pekerti,26
+Selasa,5,10:20-11:00,IX,IX-F,Agm/B.Pekerti,26
+Selasa,6,11:00-11:40,IX,IX-F,Bahasa Bali,27
+Selasa,7,11:50-12:30,IX,IX-F,IPA,02
+Selasa,8,12:30-13:10,IX,IX-F,IPA,02
+Rabu,2,08:10-08:50,IX,IX-F,IPA,02
+Rabu,3,08:50-09:30,IX,IX-F,IPA,02
+Rabu,4,09:40-10:20,IX,IX-F,Bahasa Bali,27
+Rabu,5,10:20-11:00,IX,IX-F,P.Pancasila,10
+Rabu,6,11:00-11:40,IX,IX-F,B.Indonesia,21
+Rabu,7,11:50-12:30,IX,IX-F,Bahasa Inggris,15
+Rabu,8,12:30-13:10,IX,IX-F,Bahasa Inggris,15
+Kamis,2,08:10-08:50,IX,IX-F,B.Indonesia,21
+Kamis,3,08:50-09:30,IX,IX-F,B.Indonesia,21
+Kamis,4,09:40-10:20,IX,IX-F,Matematika,08
+Kamis,5,10:20-11:00,IX,IX-F,Matematika,08
+Kamis,6,11:00-11:40,IX,IX-F,Seni Musik,19
+Kamis,7,11:50-12:30,IX,IX-F,Informatika,30
+Kamis,8,12:30-13:10,IX,IX-F,Informatika,30
+Jumat,2,08:10-08:50,IX,IX-F,PJOK,12
+Jumat,3,08:50-09:30,IX,IX-F,PJOK,12
+Jumat,4,09:40-10:20,IX,IX-F,Seni Musik,19
+Jumat,5,10:20-11:00,IX,IX-F,Kokurikuler,N/A
+Jumat,6,11:00-11:40,IX,IX-F,Kokurikuler,N/A
+Jumat,7,11:50-12:30,IX,IX-F,Kokurikuler,N/A
+Jumat,8,12:30-13:10,IX,IX-F,Kokurikuler,N/A
+Senin,1,07:30-08:10,VIII,VIII-A,MBG,N/A
+Senin,2,08:10-08:50,VIII,VIII-A,Matematika,07
+Senin,3,08:50-09:30,VIII,VIII-A,Matematika,07
+Senin,4,09:40-10:20,VIII,VIII-A,Bahasa Inggris,16
+Senin,5,10:20-11:00,VIII,VIII-A,Bahasa Inggris,16
+Senin,6,11:00-11:40,VIII,VIII-A,Informatika,16
+Senin,7,11:50-12:30,VIII,VIII-A,IPA,03
+Senin,8,12:30-13:10,VIII,VIII-A,IPA,03
+Selasa,1,07:30-08:10,VIII,VIII-A,KERJA BAKTI,N/A
+Selasa,2,08:10-08:50,VIII,VIII-A,IPS,21
+Selasa,3,08:50-09:30,VIII,VIII-A,IPS,21
+Selasa,4,09:40-10:20,VIII,VIII-A,Bahasa Bali,29
+Selasa,5,10:20-11:00,VIII,VIII-A,Bahasa Bali,29
+Selasa,6,11:00-11:40,VIII,VIII-A,Seni Musik,20
+Selasa,7,11:50-12:30,VIII,VIII-A,B.Indonesia,24
+Selasa,8,12:30-13:10,VIII,VIII-A,B.Indonesia,24
+Rabu,1,07:30-08:10,VIII,VIII-A,KERJA BAKTI,N/A
+Rabu,2,08:10-08:50,VIII,VIII-A,Matematika,07
+Rabu,3,08:50-09:30,VIII,VIII-A,Matematika,07
+Rabu,4,09:40-10:20,VIII,VIII-A,Seni Musik,20
+Rabu,5,10:20-11:00,VIII,VIII-A,B.Indonesia,24
+Rabu,6,11:00-11:40,VIII,VIII-A,P.Pancasila,09
+Rabu,7,11:50-12:30,VIII,VIII-A,Agm/B.Pekerti,28
+Rabu,8,12:30-13:10,VIII,VIII-A,Bahasa Inggris,16
+Senin,2,08:10-08:50,VIII,VIII-B,B.Indonesia,24
+Senin,3,08:50-09:30,VIII,VIII-B,B.Indonesia,24
+Senin,4,09:40-10:20,VIII,VIII-B,Matematika,07
+Senin,5,10:20-11:00,VIII,VIII-B,Matematika,07
+Senin,6,11:00-11:40,VIII,VIII-B,Matematika,07
+Senin,7,11:50-12:30,VIII,VIII-B,Bahasa Bali,29
+Senin,8,12:30-13:10,VIII,VIII-B,Bahasa Bali,29
+Selasa,2,08:10-08:50,VIII,VIII-B,IPA,03
+Selasa,3,08:50-09:30,VIII,VIII-B,IPA,03
+Selasa,4,09:40-10:20,VIII,VIII-B,Informatika,16
+Selasa,5,10:20-11:00,VIII,VIII-B,Informatika,16
+Selasa,6,11:00-11:40,VIII,VIII-B,B.Indonesia,20
+Selasa,7,11:50-12:30,VIII,VIII-B,IPS,21
+Selasa,8,12:30-13:10,VIII,VIII-B,IPS,21
+Rabu,2,08:10-08:50,VIII,VIII-B,Bahasa Inggris,16
+Rabu,3,08:50-09:30,VIII,VIII-B,Bahasa Inggris,16
+Rabu,4,09:40-10:20,VIII,VIII-B,Matematika,07
+Rabu,5,10:20-11:00,VIII,VIII-B,Matematika,07
+Rabu,6,11:00-11:40,VIII,VIII-B,IPA,03
+Rabu,7,11:50-12:30,VIII,VIII-B,P.Pancasila,09
+Rabu,8,12:30-13:10,VIII,VIII-B,P.Pancasila,09
+Senin,2,08:10-08:50,VIII,VIII-C,P.Pancasila,09
+Senin,3,08:50-09:30,VIII,VIII-C,P.Pancasila,09
+Senin,4,09:40-10:20,VIII,VIII-C,IPA,03
+Senin,5,10:20-11:00,VIII,VIII-C,IPA,03
+Senin,6,11:00-11:40,VIII,VIII-C,Agm/B.Pekerti,27
+Senin,7,11:50-12:30,VIII,VIII-C,B.Indonesia,23
+Senin,8,12:30-13:10,VIII,VIII-C,B.Indonesia,23
+Selasa,2,08:10-08:50,VIII,VIII-C,Matematika,07
+Selasa,3,08:50-09:30,VIII,VIII-C,Matematika,07
+Selasa,4,09:40-10:20,VIII,VIII-C,IPA,03
+Selasa,5,10:20-11:00,VIII,VIII-C,IPA,03
+Selasa,6,11:00-11:40,VIII,VIII-C,Bahasa Inggris,16
+Selasa,7,11:50-12:30,VIII,VIII-C,Bahasa Inggris,16
+Selasa,8,12:30-13:10,VIII,VIII-C,Informatika,16
+Rabu,2,08:10-08:50,VIII,VIII-C,Matematika,07
+Rabu,3,08:50-09:30,VIII,VIII-C,Matematika,07
+Rabu,4,09:40-10:20,VIII,VIII-C,Bahasa Bali,29
+Rabu,5,10:20-11:00,VIII,VIII-C,Bahasa Bali,29
+Rabu,6,11:00-11:40,VIII,VIII-C,Matematika,07
+Rabu,7,11:50-12:30,VIII,VIII-C,Matematika,07
+Rabu,8,12:30-13:10,VIII,VIII-C,Seni Musik,27
+Senin,2,08:10-08:50,VIII,VIII-D,IPA,03
+Senin,3,08:50-09:30,VIII,VIII-D,IPA,03
+Senin,4,09:40-10:20,VIII,VIII-D,B.Indonesia,23
+Senin,5,10:20-11:00,VIII,VIII-D,B.Indonesia,23
+Senin,6,11:00-11:40,VIII,VIII-D,B.Indonesia,23
+Senin,7,11:50-12:30,VIII,VIII-D,IPS,24
+Senin,8,12:30-13:10,VIII,VIII-D,IPS,24
+Selasa,2,08:10-08:50,VIII,VIII-D,Bahasa Inggris,16
+Selasa,3,08:50-09:30,VIII,VIII-D,Bahasa Inggris,16
+Selasa,4,09:40-10:20,VIII,VIII-D,Matematika,07
+Selasa,5,10:20-11:00,VIII,VIII-D,Matematika,07
+Selasa,6,11:00-11:40,VIII,VIII-D,IPA,03
+Selasa,7,11:50-12:30,VIII,VIII-D,IPA,03
+Selasa,8,12:30-13:10,VIII,VIII-D,Bahasa Bali,29
+Rabu,2,08:10-08:50,VIII,VIII-D,Bahasa Inggris,16
+Rabu,3,08:50-09:30,VIII,VIII-D,Bahasa Inggris,16
+Rabu,4,09:40-10:20,VIII,VIII-D,Informatika,16
+Rabu,5,10:20-11:00,VIII,VIII-D,Agm/B.Pekerti,26
+Rabu,6,11:00-11:40,VIII,VIII-D,Seni Musik,27
+Rabu,7,11:50-12:30,VIII,VIII-D,Seni Musik,19
+Rabu,8,12:30-13:10,VIII,VIII-D,Bahasa Bali,29
+Senin,2,08:10-08:50,VIII,VIII-E,Agm/B.Pekerti,26
+Senin,3,08:50-09:30,VIII,VIII-E,Agm/B.Pekerti,26
+Senin,4,09:40-10:20,VIII,VIII-E,Bahasa Inggris,14
+Senin,5,10:20-11:00,VIII,VIII-E,Bahasa Inggris,14
+Senin,6,11:00-11:40,VIII,VIII-E,Bahasa Bali,29
+Senin,7,11:50-12:30,VIII,VIII-E,Informatika,30
+Senin,8,12:30-13:10,VIII,VIII-E,Informatika,30
+Selasa,2,08:10-08:50,VIII,VIII-E,PJOK,12
+Selasa,3,08:50-09:30,VIII,VIII-E,PJOK,12
+Selasa,4,09:40-10:20,VIII,VIII-E,B.Indonesia,23
+Selasa,5,10:20-11:00,VIII,VIII-E,B.Indonesia,23
+Selasa,6,11:00-11:40,VIII,VIII-E,Matematika,07
+Selasa,7,11:50-12:30,VIII,VIII-E,Matematika,07
+Selasa,8,12:30-13:10,VIII,VIII-E,P.Pancasila,10
+Rabu,2,08:10-08:50,VIII,VIII-E,PJOK,12
+Rabu,3,08:50-09:30,VIII,VIII-E,PJOK,12
+Rabu,4,09:40-10:20,VIII,VIII-E,P.Pancasila,10
+Rabu,5,10:20-11:00,VIII,VIII-E,IPS,23
+Rabu,6,11:00-11:40,VIII,VIII-E,B.Indonesia,23
+Rabu,7,11:50-12:30,VIII,VIII-E,B.Indonesia,23
+Rabu,8,12:30-13:10,VIII,VIII-E,B.Indonesia,23
+Senin,2,08:10-08:50,VIII,VIII-F,B.Indonesia,23
+Senin,3,08:50-09:30,VIII,VIII-F,B.Indonesia,23
+Senin,4,09:40-10:20,VIII,VIII-F,Bahasa Bali,29
+Senin,5,10:20-11:00,VIII,VIII-F,Bahasa Bali,29
+Senin,6,11:00-11:40,VIII,VIII-F,Bahasa Inggris,14
+Senin,7,11:50-12:30,VIII,VIII-F,Bahasa Inggris,14
+Senin,8,12:30-13:10,VIII,VIII-F,Bahasa Inggris,14
+Selasa,2,08:10-08:50,VIII,VIII-F,PJOK,12
+Selasa,3,08:50-09:30,VIII,VIII-F,PJOK,12
+Selasa,4,09:40-10:20,VIII,VIII-F,P.Pancasila,10
+Selasa,5,10:20-11:00,VIII,VIII-F,P.Pancasila,10
+Selasa,6,11:00-11:40,VIII,VIII-F,IPS,23
+Selasa,7,11:50-12:30,VIII,VIII-F,Matematika,05
+Selasa,8,12:30-13:10,VIII,VIII-F,Matematika,05
+Rabu,2,08:10-08:50,VIII,VIII-F,PJOK,12
+Rabu,3,08:50-09:30,VIII,VIII-F,PJOK,12
+Rabu,4,09:40-10:20,VIII,VIII-F,IPA,03
+Rabu,5,10:20-11:00,VIII,VIII-F,IPA,03
+Rabu,6,11:00-11:40,VIII,VIII-F,Agm/B.Pekerti,26
+Rabu,7,11:50-12:30,VIII,VIII-F,P.Pancasila,10
+Rabu,8,12:30-13:10,VIII,VIII-F,Seni Musik,28
+Senin,2,08:10-08:50,VIII,VIII-G,IPA,02
+Senin,3,08:50-09:30,VIII,VIII-G,IPA,02
+Senin,4,09:40-10:20,VIII,VIII-G,Bahasa Bali,28
+Senin,5,10:20-11:00,VIII,VIII-G,Bahasa Bali,28
+Senin,6,11:00-11:40,VIII,VIII-G,Matematika,05
+Senin,7,11:50-12:30,VIII,VIII-G,IPS,25
+Senin,8,12:30-13:10,VIII,VIII-G,IPS,25
+Selasa,2,08:10-08:50,VIII,VIII-G,Matematika,05
+Selasa,3,08:50-09:30,VIII,VIII-G,Matematika,05
+Selasa,4,09:40-10:20,VIII,VIII-G,Bahasa Inggris,14
+Selasa,5,10:20-11:00,VIII,VIII-G,Bahasa Inggris,14
+Selasa,6,11:00-11:40,VIII,VIII-G,Seni Musik,19
+Selasa,7,11:50-12:30,VIII,VIII-G,Seni Musik,19
+Selasa,8,12:30-13:10,VIII,VIII-G,Agm/B.Pekerti,26
+Rabu,2,08:10-08:50,VIII,VIII-G,Matematika,05
+Rabu,3,08:50-09:30,VIII,VIII-G,Matematika,05
+Rabu,4,09:40-10:20,VIII,VIII-G,Informatika,30
+Rabu,5,10:20-11:00,VIII,VIII-G,Informatika,30
+Rabu,6,11:00-11:40,VIII,VIII-G,Matematika,05
+Rabu,7,11:50-12:30,VIII,VIII-G,Seni Musik,19
+Rabu,8,12:30-13:10,VIII,VIII-G,IPA,02
+Senin,2,08:10-08:50,VIII,VIII-H,B.Indonesia,25
+Senin,3,08:50-09:30,VIII,VIII-H,B.Indonesia,25
+Senin,4,09:40-10:20,VIII,VIII-H,B.Indonesia,25
+Senin,5,10:20-11:00,VIII,VIII-H,B.Indonesia,25
+Senin,6,11:00-11:40,VIII,VIII-H,IPA,03
+Senin,7,11:50-12:30,VIII,VIII-H,P.Pancasila,10
+Senin,8,12:30-13:10,VIII,VIII-H,P.Pancasila,10
+Selasa,2,08:10-08:50,VIII,VIII-H,Bahasa Inggris,14
+Selasa,3,08:50-09:30,VIII,VIII-H,Bahasa Inggris,14
+Selasa,4,09:40-10:20,VIII,VIII-H,IPS,25
+Selasa,5,10:20-11:00,VIII,VIII-H,IPS,25
+Selasa,6,11:00-11:40,VIII,VIII-H,B.Indonesia,25
+Selasa,7,11:50-12:30,VIII,VIII-H,B.Indonesia,25
+Selasa,8,12:30-13:10,VIII,VIII-H,B.Indonesia,25
+Rabu,2,08:10-08:50,VIII,VIII-H,Bahasa Inggris,14
+Rabu,3,08:50-09:30,VIII,VIII-H,Bahasa Inggris,14
+Rabu,4,09:40-10:20,VIII,VIII-H,Matematika,05
+Rabu,5,10:20-11:00,VIII,VIII-H,Matematika,05
+Rabu,6,11:00-11:40,VIII,VIII-H,Bahasa Bali,28
+Rabu,7,11:50-12:30,VIII,VIII-H,IPA,03
+Rabu,8,12:30-13:10,VIII,VIII-H,IPA,03
