@@ -4,29 +4,30 @@ import io
 
 # 1. Pastikan fungsi load_data didefinisikan dengan benar
 @st.cache_data
+@st.cache_data
 def load_data():
     try:
         df = pd.read_csv("Master_Jadwal_Sekolah.csv")
         
-        # 1. Bersihkan spasi berlebih pada semua teks
-        df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+        # --- PERBAIKAN: CEK NAMA KOLOM ---
+        # Menghapus spasi di awal/akhir nama kolom (mengatasi typo spasi)
+        df.columns = df.columns.str.strip()
         
-        # 2. Hapus baris yang Mapel atau Kode_Guru-nya kosong (nan)
-        df = df.dropna(subset=['Mapel', 'Kode_Guru'])
-        
-        # 3. Konversi Kode_Guru ke string dan hapus kode '0' atau 'nan'
-        df['Kode_Guru'] = df['Kode_Guru'].astype(str).str.replace('.0', '', regex=False)
-        df = df[df['Kode_Guru'] != 'nan']
-        df = df[df['Kode_Guru'] != '0']
-        
-        # 4. HAPUS BARIS GANDA (Kunci utama masalah Anda)
+        # Cek apakah kolom yang dibutuhkan benar-benar ada
+        required_cols = ['Hari', 'Jam Ke', 'Mapel', 'Kode_Guru']
+        for col in required_cols:
+            if col not in df.columns:
+                st.error(f"Kolom '{col}' tidak ditemukan di file CSV! Nama kolom yang ada: {list(df.columns)}")
+                return pd.DataFrame()
+
+        # Membersihkan data
+        df['Kode_Guru'] = df['Kode_Guru'].fillna('0').astype(str)
         df = df.drop_duplicates()
-        
         return df
+        
     except Exception as e:
         st.error(f"Gagal memuat file: {e}")
         return pd.DataFrame()
-
 # 2. Muat data
 df = load_data()
 
