@@ -7,8 +7,21 @@ import io
 def load_data():
     try:
         df = pd.read_csv("Master_Jadwal_Sekolah.csv")
-        # Membersihkan kolom Kode_Guru agar tidak ada nilai null/nan
-        df['Kode_Guru'] = df['Kode_Guru'].fillna('0').astype(str)
+        
+        # 1. Bersihkan spasi berlebih pada semua teks
+        df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+        
+        # 2. Hapus baris yang Mapel atau Kode_Guru-nya kosong (nan)
+        df = df.dropna(subset=['Mapel', 'Kode_Guru'])
+        
+        # 3. Konversi Kode_Guru ke string dan hapus kode '0' atau 'nan'
+        df['Kode_Guru'] = df['Kode_Guru'].astype(str).str.replace('.0', '', regex=False)
+        df = df[df['Kode_Guru'] != 'nan']
+        df = df[df['Kode_Guru'] != '0']
+        
+        # 4. HAPUS BARIS GANDA (Kunci utama masalah Anda)
+        df = df.drop_duplicates()
+        
         return df
     except Exception as e:
         st.error(f"Gagal memuat file: {e}")
