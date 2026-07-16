@@ -57,18 +57,23 @@ if pilih_kode != "-- Pilih Kode --":
     st.dataframe(filtered_df, use_container_width=True, hide_index=True)
     
     # Fungsi Download Excel Berwarna
+  # Fungsi Download Excel Berwarna dengan pembersihan ganda
     def to_excel_colored(df):
+        # 1. Bersihkan duplikat tepat sebelum dibuat file excel
+        df_clean = df.drop_duplicates()
+        
         output = io.BytesIO()
         writer = pd.ExcelWriter(output, engine='xlsxwriter')
-        df.to_excel(writer, index=False, sheet_name='Jadwal')
+        df_clean.to_excel(writer, index=False, sheet_name='Jadwal')
         
         workbook = writer.book
         worksheet = writer.sheets['Jadwal']
-        # Warna untuk setiap hari
+        
+        # ... (kode warna Anda tetap sama) ...
         colors = {'Senin': '#FFC0CB', 'Selasa': '#ADD8E6', 'Rabu': '#90EE90', 
                   'Kamis': '#FFFFE0', 'Jumat': '#D8BFD8', 'Sabtu': '#FFD700'}
         
-        for idx, row in df.iterrows():
+        for idx, row in df_clean.iterrows():
             color = colors.get(row['Hari'], '#FFFFFF')
             fmt = workbook.add_format({'bg_color': color, 'border': 1})
             for col_num, value in enumerate(row):
